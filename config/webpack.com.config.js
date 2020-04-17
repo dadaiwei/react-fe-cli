@@ -54,10 +54,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".jsx", ".js"],
-    modules: [
-      path.resolve(__dirname, '../node_modules')
-    ]
+    extensions: [".jsx", ".js"]
   },
   optimization: {
     splitChunks: {

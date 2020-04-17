@@ -6,7 +6,6 @@ const child_process = require('child_process');
 const download = require('download-git-repo');
 const ora = require('ora');
 const {successLog, errorLog} = require('../utils/index');
-
 const templateUrl = 'dadaiwei/react-template';
 
 // 修改package.json中的name

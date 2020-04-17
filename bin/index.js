@@ -15,13 +15,13 @@ program.command('create <app-name>')
 program.command('dev')
   .description('Start app development.')
   .action(() => {
-    require('../packages/development')();
+    require('../packages/dev')();
   });
 
 program.command('build')
   .description('Build app bundle.')
   .action(() => {
-    require('../packages/production')();
+    require('../packages/prod')();
   });
 
 program.parse(process.argv);  

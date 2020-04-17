@@ -6,7 +6,8 @@ const webpackConfig = require('../config/webpack.dev.config');
 
 // 开发模式下打包
 function development() {
-  webpack(webpackConfig, (err, stats) => {
+  const compilder = webpack(webpackConfig);
+  compilder.run((err, stats) => {
     if (err) {
       errorLog(err);
       process.exit(1);
@@ -18,6 +19,11 @@ function development() {
       chunks: false,
       chunkModules: false
     }));
+
+    if (stats.hasErrors()) {
+      errorLog('  Build failed with errors.\n');
+      process.exit(1);
+    }
     console.log(`\nApp is running: ${underlineLog('http://localhost:3000/')}`);
   });
 };
