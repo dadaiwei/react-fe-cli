@@ -28,7 +28,8 @@ function editPackageName(appName) {
 function installPackages(appName) {
   const appPath = path.resolve(process.cwd(), appName);
   return new Promise((resolve, reject) => {
-    const spinner = ora('开始安装相关依赖包');
+    const spinner = ora('安装依赖包');
+    spinner.start();
     child_process.exec('npm install', {cwd: appPath}, (err) => {
       spinner.stop();
       if (err) {

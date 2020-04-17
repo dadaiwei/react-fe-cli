@@ -1,9 +1,10 @@
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const path = require('path');
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CSSSplitWebpackPlugin = require("css-split-webpack-plugin").default;
-const { appIndexJs, appBuild, appHtml } = require("./pathConfig");
+const {appIndexJs, appBuild, appHtml} = require("./pathConfig");
 
 module.exports = {
   entry: {
@@ -53,7 +54,10 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".jsx", ".js"]
+    extensions: [".jsx", ".js"],
+    modules: [
+      path.resolve(__dirname, '../node_modules')
+    ]
   },
   optimization: {
     splitChunks: {

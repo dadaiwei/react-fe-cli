@@ -18,7 +18,7 @@ function development() {
       chunks: false,
       chunkModules: false
     }));
-    console.log(`App is running: ${underlineLog('http://localhost:3000/')}`);
+    console.log(`\nApp is running: ${underlineLog('http://localhost:3000/')}`);
   });
 };
 
