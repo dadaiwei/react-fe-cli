@@ -27,16 +27,16 @@ function editPackageName(appName) {
 // 下载依赖包
 function installPackages(appName) {
   const appPath = path.resolve(process.cwd(), appName);
-  const spinner = ora('开始安装相关依赖包');
   return new Promise((resolve, reject) => {
-    const child = child_process.exec('npm install', {cwd: appPath}, (err) => {
+    const spinner = ora('开始安装相关依赖包');
+    child_process.exec('npm install', {cwd: appPath}, (err) => {
       spinner.stop();
       if (err) {
         return reject(err);
       }
       successLog('依赖包安装成功');
       console.log(`cd ${appName}`);
-      console.log(`npm run dev`);
+      console.log(`npm run start`);
       resolve();
     });
   });

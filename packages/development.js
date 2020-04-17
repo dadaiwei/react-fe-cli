@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const webpack = require('webpack');
-const {errorLog} = require('../utils/index');
+const {errorLog, underlineLog} = require('../utils/index');
 const webpackConfig = require('../config/webpack.dev.config');
 
 // 开发模式下打包
@@ -18,6 +18,7 @@ function development() {
       chunks: false,
       chunkModules: false
     }));
+    console.log(`App is running: ${underlineLog('http://localhost:3000/')}`);
   });
 };
 
