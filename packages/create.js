@@ -35,6 +35,8 @@ function installPackages(appName) {
         return reject(err);
       }
       successLog('依赖包安装成功');
+      console.log(`cd ${appName}`);
+      console.log(`npm run dev`);
       resolve();
     });
   });
