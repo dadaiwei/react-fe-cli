@@ -5,7 +5,7 @@ const fs = require('fs');
 const child_process = require('child_process');
 const download = require('download-git-repo');
 const ora = require('ora');
-const {infoLog, successLog, errorLog} = require('../utils/index');
+const {successLog, errorLog} = require('../utils/index');
 
 const templateUrl = 'dadaiwei/react-template';
 

@@ -8,8 +8,20 @@ program.version(version)
 
 program.command('create <app-name>')
   .description('create a new project by react-cli')
-  .action((name, cmd) => {
+  .action((name) => {
     require('../packages/create')(name);
+  });
+
+program.command('dev')
+  .description('Start app development.')
+  .action(() => {
+    require('../packages/development')();
+  });
+
+program.command('build')
+  .description('Build app bundle.')
+  .action(() => {
+    require('../packages/production')();
   });
 
 program.parse(process.argv);  
