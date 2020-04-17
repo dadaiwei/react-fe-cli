@@ -7,6 +7,7 @@ module.exports = merge(baseConfig, {
   devtool: "cheap-module-eval-source-map",
   devServer: {
     contentBase: path.join(process.cwd(), "dist"),
+    publicPath: '/assets',
     host: "localhost",
     port: 3000,
     open: true, // 自动打开浏览器

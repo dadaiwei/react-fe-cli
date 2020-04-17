@@ -12,8 +12,7 @@ module.exports = {
   },
   output: {
     filename: "[name].[hash:7].js",
-    path: appBuild,
-    publicPath: path.resolve(process.cwd(), './')
+    path: appBuild
   },
   module: {
     rules: [

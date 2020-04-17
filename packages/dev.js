@@ -9,7 +9,8 @@ const webpackConfig = require('../config/webpack.dev.config');
 function development() {
   const compiler = webpack(webpackConfig);
   const server = new WebpackDevServer(compiler, {
-    contentBase: webpackConfig.devServer.contentBase
+    contentBase: webpackConfig.devServer.contentBase,
+    publicPath: webpackConfig.devServer.publicPath
   });
   server.listen(webpackConfig.devServer.port, (err) => {
     if (err) {
