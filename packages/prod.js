@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-#!/usr/bin / env node;
-
 const webpack = require('webpack');
 const {errorLog, successLog} = require('../utils/index');
 const webpackConfig = require('../config/webpack.prod.config');
@@ -13,8 +11,8 @@ function production() {
       errorLog(err);
       process.exit(1);
     }
-    const compilder = webpack(webpackConfig);
-    compilder.run((err, stats) => {
+    const compiler = webpack(webpackConfig);
+    compiler.run((err, stats) => {
       if (err) {
         errorLog(err);
         process.exit(1);

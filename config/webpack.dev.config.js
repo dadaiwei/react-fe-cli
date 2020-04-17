@@ -6,7 +6,7 @@ module.exports = merge(baseConfig, {
   mode: "development",
   devtool: "cheap-module-eval-source-map",
   devServer: {
-    contentBase: path.join(__dirname, "../dist"),
+    contentBase: path.join(process.cwd(), "dist"),
     host: "localhost",
     port: 3000,
     open: true, // 自动打开浏览器
