@@ -19,7 +19,7 @@ react create appName
 ```
 cd appName
 ```
-本地开发模式：
+本地开发模式（http://localhost:3000/）：
 ```
 npm run start
 ```
