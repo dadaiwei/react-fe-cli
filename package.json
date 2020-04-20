@@ -1,6 +1,6 @@
 {
   "name": "react-fe-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react项目开发脚手架",
   "main": "./bin/index.js",
   "bin": {
