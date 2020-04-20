@@ -1,4 +1,3 @@
-const path = require('path');
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -22,8 +21,8 @@ module.exports = {
         use: ["babel-loader"]
       },
       {
-        test: /\.(sa|sc|c)ss$/, // scss、css处理
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+        test: /\.(le|c)ss$/, // scss、css处理
+        use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)/, // 图片处理
