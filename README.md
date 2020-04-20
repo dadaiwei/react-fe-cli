@@ -3,7 +3,7 @@ react开发脚手架，支持项目初始化、本地开发、打包功能。
 
 全局安装脚手架：
 ```
-npm i react-fe-cli
+npm i react-fe-cli -g
 ```
 查看版本：
 ```
