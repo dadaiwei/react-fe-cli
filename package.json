@@ -1,14 +1,15 @@
 {
   "name": "react-fe-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "react项目开发脚手架",
   "main": "./bin/index.js",
   "bin": {
     "react": "./bin/index.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "keywords": [
+    "react",
+    "cli"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dadaiwei/react-cli.git"
